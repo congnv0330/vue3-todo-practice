@@ -105,7 +105,6 @@ export default defineComponent({
 
     const checkTodo = () => {
       emit('updateTodo', cloneTodo)
-      isEdit.value = false
     }
 
     const updateTodo = () => {
@@ -122,8 +121,9 @@ export default defineComponent({
     }
 
     const deleteTodo = () => {
-      emit('deleteTodo', props.todo.id)
-      isEdit.value = false
+      if (confirm('Are you sure?')) {
+        emit('deleteTodo', props.todo.id)
+      }
     }
 
     return {
