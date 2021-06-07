@@ -71,8 +71,8 @@ export default defineComponent({
         && Object.prototype.hasOwnProperty.call(object, 'isCheck');
     }
 
-    const onUploadBackup = (e: { target: HTMLInputElement }) => {
-      const files = e.target.files
+    const onUploadBackup = (e: Event) => {
+      const files = (<HTMLInputElement>e.target).files
 
       if (files && files.length > 0) {
         const file = files[0]
