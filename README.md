@@ -1,5 +1,8 @@
 # Vue 3 + Typescript + Vite
 
+Screenshots
+![Demo](https://github.com/thanhcong2930/vue3-todo-practice/blob/main/screenshots/demo.png?raw=true)
+
 This template should help get you started developing with Vue 3 and Typescript in Vite.
 
 ## Recommended IDE Setup
