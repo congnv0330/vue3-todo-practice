@@ -7,11 +7,11 @@ class TodoService {
 
   public static getInstance(): TodoService {
     if (!this.instance) {
-      this.instance = new TodoService();
+      this.instance = new TodoService()
     }
 
     return this.instance
-}
+  }
 
   private constructor () {
     this.storage = localStorage
@@ -31,10 +31,14 @@ class TodoService {
       return todos
     }
 
+    const getTime = (date: Date) => {
+      return new Date(date).getTime()
+    }
+
     todos = todos.sort((a, b) => {
       return filter.sortDesc === true
-        ? new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-        : new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+        ? getTime(b.createdAt) - getTime(a.createdAt)
+        : getTime(a.createdAt) - getTime(b.createdAt)
     })
 
     if (filter.q?.trim()) {
