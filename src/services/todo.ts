@@ -18,6 +18,10 @@ class TodoService {
     this.key = 'todos'
   }
 
+  save (todos: Todo[]) {
+    this.storage.setItem(this.key, JSON.stringify(todos))
+  }
+
   get (filter: TodoFilter = {q: '', sortDesc: true}): Todo[] {
     const data = this.storage.getItem(this.key)
 
@@ -46,7 +50,7 @@ class TodoService {
 
     todos.unshift(todo)
 
-    this.storage.setItem(this.key, JSON.stringify(todos))
+    this.save(todos)
   }
 
   update (id: string, todo: Todo): void {
@@ -61,7 +65,7 @@ class TodoService {
     todos[index].content = todo.content
     todos[index].isCheck = todo.isCheck
 
-    this.storage.setItem(this.key, JSON.stringify(todos))
+    this.save(todos)
   }
 
   delete (id: string) {
@@ -75,7 +79,7 @@ class TodoService {
 
     todos.splice(index, 1)
 
-    this.storage.setItem(this.key, JSON.stringify(todos))
+    this.save(todos)
   }
 
   deleteAll () {
