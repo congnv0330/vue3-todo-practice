@@ -6,6 +6,11 @@ const routes : Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/setting',
+    name: 'setting',
+    component: () => import('@/pages/Setting.vue')
   }
 ]
 
