@@ -27,7 +27,7 @@ import VTodos from '@/components/VTodos.vue'
 import VCreateTodo from '@/components/VCreateTodo.vue'
 import VFilter from '@/components/VFilter.vue'
 import todoService from '@/services/todo'
-import { Todo, TodoFilter } from '@/types/todo'
+import { Todo, TodoFilter } from '@/types'
 
 export default defineComponent({
   name: 'HomePage',

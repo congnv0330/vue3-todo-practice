@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue'
-import Theme from '@/types/theme'
+import { Theme } from '@/types'
 
 const useTheme = () => {
   let localTheme: Theme = 'light'

@@ -23,7 +23,7 @@
 <script lang="ts">
 import { PropType, defineComponent } from 'vue'
 import VTodo from './VTodo.vue'
-import Todo from '@/types/todo'
+import { Todo } from '@/types'
 
 export default defineComponent({
   name: 'VTodos',

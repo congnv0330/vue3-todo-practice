@@ -17,7 +17,7 @@
 import { ref, defineComponent } from 'vue'
 import VInput from './VInput.vue'
 import VButton from './VButton.vue'
-import Todo from '@/types/todo'
+import { Todo } from '@/types'
 
 export default defineComponent({
   name: 'VCreateTodo',

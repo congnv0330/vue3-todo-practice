@@ -47,7 +47,7 @@
 <script lang="ts">
 import { ref, reactive, watch, defineComponent } from 'vue'
 import VInput from './VInput.vue'
-import { TodoFilter } from '@/types/todo'
+import { TodoFilter } from '@/types'
 import debounce from 'lodash/debounce'
 
 export default defineComponent({

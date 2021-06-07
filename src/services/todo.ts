@@ -1,4 +1,4 @@
-import { Todo, TodoFilter } from '@/types/todo'
+import { Todo, TodoFilter } from '@/types'
 
 class TodoService {
   readonly storage
