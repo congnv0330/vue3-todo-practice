@@ -25,6 +25,7 @@ import { computed, defineComponent } from 'vue'
 import { useTheme } from '@/uses'
 
 export default defineComponent({
+  name: 'VTheme',
   setup () {
     const { currentTheme, setTheme } = useTheme()
 
@@ -34,6 +35,6 @@ export default defineComponent({
       isDark,
       setTheme
     }
-  },
+  }
 })
 </script>
