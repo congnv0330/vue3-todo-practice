@@ -1,8 +1,11 @@
 <template>
-  <div class="p-4 md:p-5 border-b border-gray-200">
-    <h2 class="text-gray-700 mb-4">
-      Todos
-    </h2>
+  <div class="p-4 md:p-5 border-b border-gray-200 dark:border-gray-700">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-gray-700 dark:text-white">
+        Todos
+      </h2>
+      <v-theme />
+    </div>
     <v-create-todo
       @newTodo="createTodo"
     />
@@ -19,6 +22,7 @@
 
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue'
+import VTheme from '@/components/VTheme.vue'
 import VTodos from '@/components/VTodos.vue'
 import VCreateTodo from '@/components/VCreateTodo.vue'
 import VFilter from '@/components/VFilter.vue'
@@ -28,6 +32,7 @@ import { Todo, TodoFilter } from '@/types/todo'
 export default defineComponent({
   name: 'HomePage',
   components: {
+    VTheme,
     VTodos,
     VCreateTodo,
     VFilter

@@ -1,5 +1,5 @@
 <template>
-  <div class="divide-y divide-gray-200">
+  <div class="divide-y divide-gray-200 dark:divide-gray-700">
     <div
       v-show="todos.length === 0"
       class="px-4 md:px-5 py-4 bg-white"

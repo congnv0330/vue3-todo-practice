@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 md:px-5 py-4 bg-white hover:bg-gray-100">
+  <div class="px-4 md:px-5 py-4 hover:bg-gray-100 dark:hover:bg-gray-700">
     <form
       v-if="isEdit"
       method="POST"
@@ -45,14 +45,14 @@
             class="inline-block h-4 w-4 rounded mr-4"
             @change="checkTodo"
           >
-          <span :class="{ 'line-through': todo.isCheck }">
+          <span class="dark:text-white" :class="{ 'line-through': todo.isCheck }">
             {{ todo.content }}
           </span>
         </label>
       </div>
       <div class="flex justify-end items-center ">
         <button
-          class="flex items-center justify-center appearance-none focus:outline-none active:opacity-60 text-gray-700 rounded-[50%] hover:text-green-500 transition mr-4 md:mr-2"
+          class="flex items-center justify-center appearance-none focus:outline-none active:opacity-60 text-gray-700 dark:text-white rounded-[50%] hover:text-green-500 dark:hover:text-green-500 transition mr-4 md:mr-2"
           @click="isEdit = true"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +61,7 @@
           <span class="md:hidden ml-1">Edit</span>
         </button>
         <button
-          class="flex items-center justify-center appearance-none focus:outline-none active:opacity-60 text-gray-700 rounded-[50%] hover:text-red-500 transition"
+          class="flex items-center justify-center appearance-none focus:outline-none active:opacity-60 text-gray-700 dark:text-white rounded-[50%] hover:text-red-500 dark:hover:text-red-500 transition"
           @click="deleteTodo"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

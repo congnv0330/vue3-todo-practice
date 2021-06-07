@@ -2,7 +2,7 @@
   <div class="p-4 md:p-5">
     <a
       href="javascript:void(0)"
-      class="hover:underline"
+      class="dark:text-white hover:underline"
       @click="isShow = !isShow"
     >
       <h5
@@ -24,16 +24,16 @@
       <div>
         <a
           href="javascript:void(0)"
-          class="text-gray-600 hover:underline"
+          class="text-gray-600 dark:text-white hover:underline"
           :class="{ 'underline': filter.sortDesc }"
           @click="filter.sortDesc = true"
         >
           Newest
         </a>
-        <span class="mx-1">-</span>
+        <span class="mx-1 dark:text-white">-</span>
         <a
           href="javascript:void(0)"
-          class="text-gray-600 hover:underline"
+          class="text-gray-600 dark:text-white hover:underline"
           :class="{ 'underline': !filter.sortDesc }"
           @click="filter.sortDesc = false"
         >
