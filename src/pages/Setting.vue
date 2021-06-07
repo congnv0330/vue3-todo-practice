@@ -3,6 +3,10 @@
     <h2 class="text-gray-700 dark:text-white pb-3 mb-4 border-b border-gray-200 dark:border-gray-700">
       Settings
     </h2>
+    <div class="flex mb-5">
+      <p class="dark:text-white mr-3">Todo Theme:</p>
+      <v-theme />
+    </div>
     <div class="text-left mb-5">
       <p class="dark:text-white mb-2">Export Todos data as JSON.</p>
       <v-button @click="downloadBackup">
@@ -27,6 +31,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+import VTheme from '@/components/VTheme.vue'
 import VButton from '@/components/VButton.vue'
 import TodoService from '@/services/todo'
 import { Todo } from '@/types'
@@ -34,7 +39,8 @@ import { Todo } from '@/types'
 export default defineComponent({
   name: 'SettingPage',
   components: {
-    VButton
+    VButton,
+    VTheme
   },
   setup () {
     const fileBackup = ref<HTMLInputElement | null>(null)

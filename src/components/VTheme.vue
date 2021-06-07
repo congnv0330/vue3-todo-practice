@@ -3,7 +3,7 @@
     <a
       href="javascript:void(0)"
       class="text-gray-600 dark:text-white hover:underline"
-      :class="{ 'underline': !isDark }"
+      :class="{ 'underline font-medium': !isDark }"
       @click="setTheme('light')"
     >
       Light
@@ -12,7 +12,7 @@
     <a
       href="javascript:void(0)"
       class="text-gray-600 dark:text-white hover:underline"
-      :class="{ 'underline': isDark }"
+      :class="{ 'underline font-medium': isDark }"
       @click="setTheme('dark')"
     >
       Dark
